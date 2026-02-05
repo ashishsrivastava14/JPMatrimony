@@ -46,13 +46,23 @@ const Home = () => {
         <div className="hero-overlay"></div>
         <div className="hero-content">
           <div className="container">
-            <h1 className="hero-title">Find Your Perfect Life Partner</h1>
-            <p className="hero-subtitle">
-              Trusted by thousands of families. Start your journey today.
-            </p>
-            <div className="hero-actions">
-              <Link to="/register" className="btn-hero btn-primary">Register Free</Link>
-              <Link to="/profiles" className="btn-hero btn-secondary">Browse Profiles</Link>
+            <div className="hero-grid">
+              <div className="hero-text">
+                <h1 className="hero-title">Find Your Perfect Life Partner</h1>
+                <p className="hero-subtitle">
+                  Trusted by thousands of families. Start your journey today.
+                </p>
+                <div className="hero-actions">
+                  <Link to="/register" className="btn-hero btn-primary">Register Free</Link>
+                  <Link to="/profiles" className="btn-hero btn-secondary">Browse Profiles</Link>
+                </div>
+              </div>
+              <div className="hero-image">
+                <img 
+                  src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&h=600&fit=crop" 
+                  alt="Happy Couple" 
+                />
+              </div>
             </div>
           </div>
         </div>
