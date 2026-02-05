@@ -22,10 +22,17 @@ const AdminLogin = () => {
 
     try {
       const response = await authService.adminLogin(formData.email, formData.password);
-      localStorage.setItem('token', response.token);
-      navigate('/admin/dashboard');
+      if (response && response.token) {
+        localStorage.setItem('token', response.token);
+        localStorage.setItem('user', JSON.stringify(response.user));
+        // Reload to trigger auth context update
+        window.location.href = '/admin/dashboard';
+      } else {
+        setError('Invalid response from server');
+      }
     } catch (err) {
-      setError(err.response?.data?.message || 'Login failed');
+      console.error('Login error:', err);
+      setError(err.response?.data?.message || err.message || 'Invalid admin credentials. Please use: admin@example.com / admin123');
     } finally {
       setLoading(false);
     }

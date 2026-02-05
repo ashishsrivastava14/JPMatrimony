@@ -30,7 +30,9 @@ export const AuthProvider = ({ children }) => {
         setIsAuthenticated(true);
       }
     } catch (error) {
+      console.error('Auth check error:', error);
       localStorage.removeItem('token');
+      localStorage.removeItem('user');
       setUser(null);
       setIsAuthenticated(false);
     } finally {
