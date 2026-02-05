@@ -119,6 +119,267 @@ tr:hover {
   background: #c82333;
 }
 
+/* Content Management Styles */
+.content-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 10px;
+}
+
+.content-tabs button {
+  padding: 12px 24px;
+  border: none;
+  background: transparent;
+  color: #7f8c8d;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+  border-bottom: 3px solid transparent;
+}
+
+.content-tabs button.active {
+  color: #8B1538;
+  border-bottom-color: #8B1538;
+}
+
+.content-tabs button:hover {
+  color: #C41E3A;
+}
+
+.content-section {
+  animation: fadeIn 0.3s;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.section-header h2 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.faqs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faq-item {
+  padding: 20px;
+  border-left: 4px solid #8B1538;
+}
+
+.faq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.faq-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+.faq-item p {
+  color: #7f8c8d;
+  margin: 0 0 15px 0;
+}
+
+.faq-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.pages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.page-card {
+  padding: 25px;
+  text-align: center;
+  border: 2px solid #e9ecef;
+}
+
+.page-card h3 {
+  margin: 0 0 10px 0;
+  color: #2c3e50;
+}
+
+.page-card p {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin: 0 0 20px 0;
+}
+
+.plan-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  background: linear-gradient(135deg, #8B1538, #C41E3A);
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 24px;
+  background: #e9ecef;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  transition: width 0.5s;
+}
+
+.progress-bar span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.filters-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+}
+
+.search-box svg {
+  color: #7f8c8d;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-tabs button {
+  padding: 8px 20px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.filter-tabs button.active {
+  background: linear-gradient(135deg, #8B1538, #C41E3A);
+  color: white;
+  border-color: #8B1538;
+}
+
+.filter-tabs button:hover {
+  border-color: #8B1538;
+}
+
+.btn-view, .btn-reject {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.btn-view {
+  background: #3498db;
+}
+
+.btn-view:hover {
+  background: #2980b9;
+}
+
+.btn-reject {
+  background: #e74c3c;
+}
+
+.btn-reject:hover {
+  background: #c0392b;
+}
+
+.admin-users-page .stats-grid {
+  margin-bottom: 30px;
+}
+
+.table-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+@media (max-width: 768px) {
+  .filters-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-box {
+    max-width: 100%;
+  }
+  
+  .filter-tabs {
+    flex-wrap: wrap;
+  }
+}
+
 @media (max-width: 968px) {
   .table-card {
     overflow-x: auto;
