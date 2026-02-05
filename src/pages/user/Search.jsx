@@ -25,6 +25,9 @@ const Search = () => {
           location: 'Mumbai',
           education: "Master's",
           profession: 'Engineer',
+          photo: i % 2 === 0
+            ? `https://randomuser.me/api/portraits/women/${(i % 10) + 20}.jpg`
+            : `https://randomuser.me/api/portraits/men/${(i % 10) + 20}.jpg`,
           verified: i % 2 === 0,
         }));
         setSearchResults(mockResults);

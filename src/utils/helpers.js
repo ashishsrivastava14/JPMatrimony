@@ -57,8 +57,12 @@ export const removeLocalStorage = (key) => {
 };
 
 // Image utilities
-export const getImageUrl = (path) => {
-  if (!path) return '/default-avatar.jpg';
+export const getImageUrl = (path, name = 'User') => {
+  if (!path) {
+    // Generate placeholder avatar using UI Avatars API
+    const initials = name.split(' ').map(n => n[0]).join('').substring(0, 2);
+    return `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&size=400&background=8B1538&color=fff&bold=true`;
+  }
   if (path.startsWith('http')) return path;
   return `${import.meta.env.VITE_API_BASE_URL}${path}`;
 };

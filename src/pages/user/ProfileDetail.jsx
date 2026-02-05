@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { profileService } from '../../services/profileService';
+import { getImageUrl } from '../../utils/helpers';
 import { FaMapMarkerAlt, FaBriefcase, FaGraduationCap, FaUser, FaHeart, FaPhone, FaEnvelope, FaCheckCircle } from 'react-icons/fa';
 import './ProfileDetail.css';
 
@@ -43,7 +44,11 @@ const ProfileDetail = () => {
           familyType: 'Joint Family',
           familyValues: 'Traditional',
         },
-        photos: ['/profile1.jpg', '/profile2.jpg', '/profile3.jpg'],
+        photos: [
+          'https://randomuser.me/api/portraits/women/4.jpg',
+          'https://randomuser.me/api/portraits/women/5.jpg',
+          'https://randomuser.me/api/portraits/women/6.jpg'
+        ],
         verified: true,
         contactVisible: false,
       });
@@ -78,7 +83,7 @@ const ProfileDetail = () => {
             <div className="profile-header-section">
               <div className="profile-image-gallery">
                 <div className="main-image">
-                  <img src={profile.photos?.[0] || '/default-avatar.jpg'} alt={profile.name} />
+                  <img src={getImageUrl(profile.photos?.[0], profile.name)} alt={profile.name} />
                   {profile.verified && (
                     <div className="verified-badge">
                       <FaCheckCircle /> Verified Profile

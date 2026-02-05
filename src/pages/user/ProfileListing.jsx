@@ -40,6 +40,9 @@ const ProfileListing = () => {
         location: 'Mumbai',
         education: "Bachelor's",
         profession: 'Professional',
+        photo: i % 2 === 0 
+          ? `https://randomuser.me/api/portraits/women/${(i % 10) + 10}.jpg`
+          : `https://randomuser.me/api/portraits/men/${(i % 10) + 10}.jpg`,
         verified: i % 3 === 0,
       })));
       setTotalCount(50);

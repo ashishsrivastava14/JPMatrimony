@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FaUser, FaMapMarkerAlt, FaBriefcase, FaGraduationCap, FaHeart, FaCheckCircle } from 'react-icons/fa';
+import { getImageUrl } from '../../utils/helpers';
 import './ProfileCard.css';
 
 const ProfileCard = ({ profile }) => {
@@ -9,7 +10,7 @@ const ProfileCard = ({ profile }) => {
     <div className="profile-card">
       <Link to={`/profiles/${id}`} className="profile-card-link">
         <div className="profile-card-image">
-          <img src={photo || '/default-avatar.jpg'} alt={name} />
+          <img src={getImageUrl(photo, name)} alt={name} />
           {verified && (
             <div className="verified-badge">
               <FaCheckCircle /> Verified

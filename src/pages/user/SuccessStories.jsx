@@ -7,28 +7,28 @@ const SuccessStories = () => {
       coupleName: 'Priya & Rahul',
       date: 'Married in December 2025',
       story: 'We met through JP Matrimony and instantly connected. After a few meetings, we knew we were meant for each other. Thank you for bringing us together!',
-      image: '/couple1.jpg',
+      image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=400',
     },
     {
       id: 2,
       coupleName: 'Anjali & Vikram',
       date: 'Married in November 2025',
       story: 'Finding the right partner seemed impossible until we found JP Matrimony. The platform made it so easy to connect with like-minded individuals.',
-      image: '/couple2.jpg',
+      image: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400',
     },
     {
       id: 3,
       coupleName: 'Neha & Arjun',
       date: 'Married in October 2025',
       story: 'JP Matrimony helped us find each other despite being in different cities. The verified profiles gave us confidence in our search.',
-      image: '/couple3.jpg',
+      image: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400',
     },
     {
       id: 4,
       coupleName: 'Shreya & Karthik',
       date: 'Married in September 2025',
       story: 'We are grateful to JP Matrimony for this wonderful platform. It helped our families connect and we found our perfect match!',
-      image: '/couple4.jpg',
+      image: 'https://images.unsplash.com/photo-1529634597633-c0163da995e5?w=400',
     },
   ];
 
@@ -54,7 +54,7 @@ const SuccessStories = () => {
           {stories.map(story => (
             <div key={story.id} className="story-card">
               <div className="story-image">
-                <img src={story.image} alt={story.coupleName} onError={(e) => e.target.src = '/default-couple.jpg'} />
+                <img src={story.image} alt={story.coupleName} />
               </div>
               <div className="story-content">
                 <h3>{story.coupleName}</h3>

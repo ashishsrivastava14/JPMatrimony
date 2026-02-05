@@ -22,12 +22,12 @@ const Home = () => {
       console.error('Error loading profiles:', error);
       // Mock data for demo
       setFeaturedProfiles([
-        { id: 1, name: 'Priya Sharma', age: 25, gender: 'female', height: "5'4\"", religion: 'Hindu', caste: 'Brahmin', location: 'Mumbai', education: "Bachelor's", profession: 'Software Engineer', verified: true },
-        { id: 2, name: 'Rahul Kumar', age: 28, gender: 'male', height: "5'9\"", religion: 'Hindu', location: 'Delhi', education: "Master's", profession: 'Business Analyst', verified: true },
-        { id: 3, name: 'Anjali Patel', age: 26, gender: 'female', height: "5'5\"", religion: 'Hindu', location: 'Bangalore', education: "Bachelor's", profession: 'Teacher', verified: false },
-        { id: 4, name: 'Vikram Singh', age: 30, gender: 'male', height: "5'11\"", religion: 'Sikh', location: 'Chandigarh', education: "Bachelor's", profession: 'Doctor', verified: true },
-        { id: 5, name: 'Neha Reddy', age: 24, gender: 'female', height: "5'3\"", religion: 'Hindu', location: 'Hyderabad', education: "Master's", profession: 'CA', verified: true },
-        { id: 6, name: 'Arjun Mehta', age: 29, gender: 'male', height: "5'10\"", religion: 'Hindu', location: 'Pune', education: "Bachelor's", profession: 'Engineer', verified: false },
+        { id: 1, name: 'Priya Sharma', age: 25, gender: 'female', height: "5'4\"", religion: 'Hindu', caste: 'Brahmin', location: 'Mumbai', education: "Bachelor's", profession: 'Software Engineer', photo: 'https://randomuser.me/api/portraits/women/1.jpg', verified: true },
+        { id: 2, name: 'Rahul Kumar', age: 28, gender: 'male', height: "5'9\"", religion: 'Hindu', location: 'Delhi', education: "Master's", profession: 'Business Analyst', photo: 'https://randomuser.me/api/portraits/men/1.jpg', verified: true },
+        { id: 3, name: 'Anjali Patel', age: 26, gender: 'female', height: "5'5\"", religion: 'Hindu', location: 'Bangalore', education: "Bachelor's", profession: 'Teacher', photo: 'https://randomuser.me/api/portraits/women/2.jpg', verified: false },
+        { id: 4, name: 'Vikram Singh', age: 30, gender: 'male', height: "5'11\"", religion: 'Sikh', location: 'Chandigarh', education: "Bachelor's", profession: 'Doctor', photo: 'https://randomuser.me/api/portraits/men/2.jpg', verified: true },
+        { id: 5, name: 'Neha Reddy', age: 24, gender: 'female', height: "5'3\"", religion: 'Hindu', location: 'Hyderabad', education: "Master's", profession: 'CA', photo: 'https://randomuser.me/api/portraits/women/3.jpg', verified: true },
+        { id: 6, name: 'Arjun Mehta', age: 29, gender: 'male', height: "5'10\"", religion: 'Hindu', location: 'Pune', education: "Bachelor's", profession: 'Engineer', photo: 'https://randomuser.me/api/portraits/men/3.jpg', verified: false },
       ]);
     } finally {
       setLoading(false);
